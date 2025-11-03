@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f4de800-c8b4-427b-b47d-27121708fcb0" name="Changes" comment="2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/graph/CondensationGraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graph/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/tasks.json" afterDir="false" />
+    <list default="true" id="8f4de800-c8b4-427b-b47d-27121708fcb0" name="Changes" comment="3">
       <change beforePath="$PROJECT_DIR$/src/main/java/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graph/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/graph/scc/SCCFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graph/scc/SCCFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/Metrics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Metrics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762139567602</updated>
-      <workItem from="1762139568679" duration="2590000" />
+      <workItem from="1762139568679" duration="2891000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <option name="closed" value="true" />
@@ -95,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762141365802</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="3">
+      <option name="closed" value="true" />
+      <created>1762142298834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762142298834</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +106,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="3" />
+    <option name="LAST_COMMIT_MESSAGE" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

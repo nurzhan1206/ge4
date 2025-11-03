@@ -3,21 +3,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// Класс для ребра
-class Edge {
-    int to;
-    int weight;
-    public Edge(int to, int weight) {
-        this.to = to;
-        this.weight = weight;
-    }
-}
-
-// Класс для графа
-class Graph {
-    int n; // Число вершин
-    Map<Integer, List<Edge>> adj; // Списки смежности
-    boolean directed;
+public class Graph {
+    public final int n;
+    public final Map<Integer, List<Edge>> adj;
+    public final boolean directed;
 
     public Graph(int n, boolean directed) {
         this.n = n;
@@ -30,13 +19,11 @@ class Graph {
 
     public void addEdge(int u, int v, int w) {
         adj.get(u).add(new Edge(v, w));
-        // Если граф неор., добавить обратное ребро
         if (!directed) {
             adj.get(v).add(new Edge(u, w));
         }
     }
 
-    // Метод для получения графа-транспозиции (нужен для Kosaraju)
     public Graph getTranspose() {
         Graph gT = new Graph(n, directed);
         for (int u = 0; u < n; u++) {
