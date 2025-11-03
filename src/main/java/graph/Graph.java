@@ -1,37 +1,49 @@
-// Файл: src/main/java/graph/Graph.java
-
-package graph;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-// Общий класс для представления графа
-public class Graph {
-    public int V;
-    public List<List<Edge>> adj;
+// Класс для ребра
+class Edge {
+    int to;
+    int weight;
+    public Edge(int to, int weight) {
+        this.to = to;
+        this.weight = weight;
+    }
+}
 
-    // Структура ребра
-    // Сделан 'public static', чтобы к нему можно было обращаться как Graph.Edge
-    public static class Edge {
-        public int target;
-        public int weight;
+// Класс для графа
+class Graph {
+    int n; // Число вершин
+    Map<Integer, List<Edge>> adj; // Списки смежности
+    boolean directed;
 
-        public Edge(int target, int weight) {
-            this.target = target;
-            this.weight = weight;
+    public Graph(int n, boolean directed) {
+        this.n = n;
+        this.directed = directed;
+        this.adj = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            adj.put(i, new ArrayList<>());
         }
     }
 
-    // Конструктор Графа
-    public Graph(int V) {
-        this.V = V;
-        adj = new ArrayList<>(V);
-        for (int i = 0; i < V; ++i)
-            adj.add(new ArrayList<>());
-    }
-
-    // Метод добавления ребра (он понадобится)
     public void addEdge(int u, int v, int w) {
         adj.get(u).add(new Edge(v, w));
+        // Если граф неор., добавить обратное ребро
+        if (!directed) {
+            adj.get(v).add(new Edge(u, w));
+        }
+    }
+
+    // Метод для получения графа-транспозиции (нужен для Kosaraju)
+    public Graph getTranspose() {
+        Graph gT = new Graph(n, directed);
+        for (int u = 0; u < n; u++) {
+            for (Edge edge : adj.get(u)) {
+                gT.addEdge(edge.to, u, edge.weight);
+            }
+        }
+        return gT;
     }
 }
